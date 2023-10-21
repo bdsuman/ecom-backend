@@ -15,6 +15,7 @@ class OrderController extends Controller
         $order = new Order();
         $order->user_id = $user->id;
         $order->total_amount = $request->total_amount;
+        $order->shipping_address = $request->shipping_address;
         $order->save();
         $order->products()->attach($request->products);
         $order->save();

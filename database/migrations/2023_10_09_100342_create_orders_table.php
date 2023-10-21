@@ -19,6 +19,7 @@ return new class extends Migration
                 $table->unsignedBigInteger('user_id'); // Foreign key to link to the users table
                 // $table->string('order_number')->unique();
                 $table->decimal('total_amount', 10, 2);
+                $table->text('shipping_address')->nullable();
                 $table->timestamps();
 
                 // Define foreign key constraint
