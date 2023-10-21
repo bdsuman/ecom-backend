@@ -41,6 +41,10 @@ Route::get(
     [ProductController::class, 'index'],
 );
 Route::get(
+    '/products/search',
+    [ProductController::class, 'search'],
+);
+Route::get(
     '/products/{id}',
     [ProductController::class, 'product']
 );
